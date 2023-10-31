@@ -19,3 +19,12 @@ export const selectMemoizedUnWatchedVideos = createSelector(
 		return allVideos.filter((video) => video.watched === false);
 	}
 );
+
+export const selectMemoizedFilteredVideos = () =>
+	createSelector(
+		selectAllVideos,
+		(state, watchedStatus) => watchedStatus,
+		(allVideos, watchedStatus) => {
+			return allVideos.filter((video) => video.watched === watchedStatus);
+		}
+	);
