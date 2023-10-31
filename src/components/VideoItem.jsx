@@ -12,8 +12,6 @@ const VideoItem = ({ video }) => {
 		dispatch(updateVideo(id));
 	};
 
-	console.log('[VideoItem] renders');
-
 	return (
 		<li className='flex justify-between py-2'>
 			<a href={link}>{title}</a>
