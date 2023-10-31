@@ -1,0 +1,1 @@
+export const selectFilterWatchStatus = (state) => state.filters.watchStatus;

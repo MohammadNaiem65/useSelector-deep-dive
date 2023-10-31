@@ -1,10 +1,9 @@
 import { useSelector } from 'react-redux';
 import VideoItem from './VideoItem';
+import { selectWatchedVideos } from '../features/videos/videoSelectors';
 
 export default function WatchedVideos() {
-	const watchedVideos = useSelector((state) =>
-		state.videos.videos.filter((v) => v.watched)
-	);
+	const watchedVideos = useSelector(selectWatchedVideos);
 
 	console.log('[WatchedVideos] renders');
 
